@@ -251,7 +251,7 @@ export default function AddPage() {
                   食物類型
                 </label>
                 <select
-                  className="w-full p-5 border-2 border-gray-200 rounded-lg text-sm md:text-base cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400 transition bg-white"
+                  className="w-full p-5 h-12 border-2 border-gray-200 rounded-lg text-sm md:text-base cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400 transition bg-white"
                   value={subCategory}
                   onChange={(e) => setSubCategory(e.target.value)}
                 >
