@@ -303,10 +303,16 @@ export default function CollectionPage() {
           <ul className="space-y-4">
             {filteredItems.map((item) => {
               const isExpanded = expandedId === item.id;
-              const mapQuery = encodeURIComponent(
-                `${item.name ?? ""} ${item.address ?? ""}`
+              // 📍大頭針：搜尋店名+地址
+              const mapQueryNameAddress = encodeURIComponent(
+                `${item.name ?? ""} ${item.address ?? ""}`.trim()
               );
-              const mapUrl = `https://www.google.com/maps/search/?api=1&query=${mapQuery}`;
+              const mapUrlNameAddress = `https://maps.google.com/?q=${mapQueryNameAddress}`;
+              
+              // 地址連結：只搜尋地址
+              const mapUrlAddress = item.address
+                ? `https://maps.google.com/?q=${encodeURIComponent(item.address)}`
+                : "";
 
               return (
                 <li
@@ -317,15 +323,14 @@ export default function CollectionPage() {
                   {/* 店名 */}
                   <div className="flex items-start justify-between gap-4">
                     <div className="text-lg md:text-xl font-bold flex-1">
-                      📍 
                       <span
                         className="text-blue-600 hover:text-blue-700 cursor-pointer hover:underline"
                         onClick={(e) => {
                           e.stopPropagation();
-                          window.open(mapUrl, "_blank");
+                          window.open(mapUrlNameAddress, "_blank");
                         }}
                       >
-                        {item.name}
+                        📍 {item.name}
                       </span>
                     </div>
 
@@ -378,7 +383,7 @@ export default function CollectionPage() {
                             className="text-blue-600 hover:text-blue-700 cursor-pointer underline"
                             onClick={(e) => {
                               e.stopPropagation();
-                              window.open(mapUrl, "_blank");
+                              window.open(mapUrlAddress, "_blank");
                             }}
                           >
                             {item.address}
