@@ -277,7 +277,7 @@ export default function AddPage() {
                 rows={4}
                 value={note}
                 onChange={(e) => setNote(e.target.value)}
-                placeholder="想寫什麼都可以,例如:誰想去的"
+                placeholder="想寫什麼都可以,例如:我想去的"
               />
             </div>
 
