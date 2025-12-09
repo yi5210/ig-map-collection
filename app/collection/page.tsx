@@ -304,7 +304,7 @@ export default function CollectionPage() {
             {filteredItems.map((item) => {
               const isExpanded = expandedId === item.id;
               const mapQuery = encodeURIComponent(
-                `${item.name ?? ""} ${item.address ?? ""} ${item.city ?? ""}`
+                `${item.name ?? ""} ${item.address ?? ""}`
               );
               const mapUrl = `https://www.google.com/maps/search/?api=1&query=${mapQuery}`;
 
