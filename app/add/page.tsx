@@ -196,7 +196,8 @@ export default function AddPage() {
                   分類
                 </label>
                 <select
-                  className="w-full p-3 border-2 border-gray-200 rounded-lg text-sm md:text-base cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400 transition bg-white"
+                  className="w-full p-5 h-12 git add .
+git commit -m "style: Force height h-12 on select boxes to match input fields on mobile"border-2 border-gray-200 rounded-lg text-sm md:text-base cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400 transition bg-white"
                   value={category}
                   onChange={(e) => {
                     const value = e.target.value;
@@ -220,7 +221,7 @@ export default function AddPage() {
                   <span className="text-red-500">*</span>
                 </label>
                 <select
-                  className={`w-full p-3 border-2 rounded-lg text-sm md:text-base cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400 transition bg-white ${
+                  className={`w-full p-5 h-12 border-2 rounded-lg text-sm md:text-base cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400 transition bg-white ${
                     errors.city ? "border-red-400 bg-red-50" : "border-gray-200"
                   }`}
                   value={city}
@@ -251,7 +252,7 @@ export default function AddPage() {
                   食物類型
                 </label>
                 <select
-                  className="w-full p-3 border-2 border-gray-200 rounded-lg text-sm md:text-base cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400 transition bg-white"
+                  className="w-full p-5 border-2 border-gray-200 rounded-lg text-sm md:text-base cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400 transition bg-white"
                   value={subCategory}
                   onChange={(e) => setSubCategory(e.target.value)}
                 >
