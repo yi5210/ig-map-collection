@@ -260,7 +260,7 @@ export default function AddPage() {
                   <option value="noodle">麵食</option>
                   <option value="dessert">甜點</option>
                   <option value="hotpot">火鍋</option>
-                  <option value="another">其他</option>
+                  <option value="other">其他</option>
                 </select>
               </div>
             )}
@@ -277,7 +277,7 @@ export default function AddPage() {
                 rows={4}
                 value={note}
                 onChange={(e) => setNote(e.target.value)}
-                placeholder="想寫什麼都可以，例如：誰想去的"
+                placeholder="想寫什麼都可以,例如:誰想去的"
               />
             </div>
 
